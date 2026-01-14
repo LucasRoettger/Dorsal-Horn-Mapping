@@ -7,9 +7,8 @@ library(ggplot2)
 library(stringr)
 library(gridExtra)
 library(tools)
-library(rstudioapi)
 
-concatFigures <- FALSE
+concatFigures <- TRUE
 plotExcluded <- TRUE
 
 # Function definitions -------------------------------------------------------
@@ -115,4 +114,5 @@ if (concatFigures) {
   grid.arrange(grobs = plot_list)
 } else {
   for (p in plot_list) print(p)
+
 }
